@@ -1,0 +1,13 @@
+Beauty Skin Retouching — ColorSuite OFX GitHub Build Project v0.4
+
+Added:
+- GitHub Actions Windows x64 workflow
+- Official OpenFX SDK checkout during CI
+- CMake multi-configuration output directory handling
+- Inno Setup packaging step and artifact upload
+- GitHub build guide and explicit implementation-status notes
+
+Retained:
+- Existing C++ OFX starter source
+- Existing six-page control specification
+- PDF-derived feature notes

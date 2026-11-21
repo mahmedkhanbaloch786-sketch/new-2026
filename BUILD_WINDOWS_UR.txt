@@ -1,0 +1,15 @@
+Windows x64 — GitHub Actions build
+
+1. GitHub par nayi repository banayein.
+2. Is project folder ke tamam contents (CMakeLists.txt, src, installer aur .github samait) main branch par upload karein.
+3. Actions tab kholein aur zaroorat ho to workflows enable karein.
+4. "Build ColorSuite OFX (Windows x64)" workflow kholein aur Run workflow dabayein.
+5. Successful run ke baad ColorSuite-Windows-x64 artifact download karein.
+6. ZIP extract karein. Is mein ColorSuite.ofx.bundle aur ColorSuite_Setup_x64.exe honge.
+
+Yeh starter source ka Windows build hai. Is se EDIUS 11 compatibility ya PDF mein darj tamam features ki takmeel sabit nahin hoti. EDIUS/OFX Bridge mein alag se test lazmi hai.
+
+Local build:
+  cmake -S . -B build -A x64 -DOPENFX_INCLUDE_DIR="C:/path/to/openfx/include"
+  cmake --build build --config Release
+  & "${env:ProgramFiles(x86)}\\Inno Setup 6\\ISCC.exe" "installer/ColorSuiteInstaller.iss"
